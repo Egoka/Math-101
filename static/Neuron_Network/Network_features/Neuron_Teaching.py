@@ -1,4 +1,5 @@
 import numpy
+from scipy import ndimage
 
 
 def teach():
@@ -23,3 +24,9 @@ def teach():
         true_output[int(full_list[0])] = 0.99
         for angle in range(10, -20, -5):
             true_input = true_input.reshape(size, size)
+
+
+###########################################################
+def turn(image, angle):
+    return ndimage.rotate(image, angle, reshape=False)
+

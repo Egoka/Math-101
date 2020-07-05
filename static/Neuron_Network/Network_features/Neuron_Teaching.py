@@ -24,6 +24,9 @@ def teach():
         true_output[int(full_list[0])] = 0.99
         for angle in range(10, -20, -5):
             true_input = true_input.reshape(size, size)
+            input_nam = turn(true_input, angle)
+            input_nam = input_nam.reshape(in_weights)
+            input_weights, output_weights = customization(input_weights, output_weights, input_nam, true_output, learn)
 
 
 ###########################################################

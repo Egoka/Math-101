@@ -13,3 +13,6 @@ def test():
         full_list = one_photo.split(',')
         true_input = (numpy.asfarray(full_list[1:]) / 255.0 * 0.99) + 0.01
         session = operation(input_weights, output_weights, true_input)
+        if int(full_list[0]) == numpy.argmax(session): true_result += 1
+    print(len(training_list), " тестовых фотографий")
+    print('Эфективность сети = ', format(((true_result / len(training_list)) * 100), '.2f'), '%')

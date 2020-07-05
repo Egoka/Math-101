@@ -30,6 +30,10 @@ def teach():
 
 
 ###########################################################
+def customization(input_weights, output_weights, true_input, true_output, speed_learn):
+    return input_weights, output_weights
+
+
+###########################################################
 def turn(image, angle):
     return ndimage.rotate(image, angle, reshape=False)
-

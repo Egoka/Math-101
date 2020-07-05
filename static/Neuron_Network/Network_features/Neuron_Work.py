@@ -10,6 +10,9 @@ def calculation():
     for one_photo in training_list:
         true_input = (numpy.asfarray(one_photo) / 255.0 * 0.99) + 0.01
         session = operation(input_weights, output_weights, true_input)
+        if numpy.max(session) > 0.2: input_str.append(numpy.argmax(session))
+    input_str.append(14)
+    numpy.save('static/Neuron_Network/Numpy_array/Symbol.npy', input_str)
 
 
 def operation(input_weights, output_weights, true_input):

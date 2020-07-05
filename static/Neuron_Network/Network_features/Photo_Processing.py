@@ -13,4 +13,7 @@ def translate_arr():
 
 ################################################################
 def compression(photo, height_out, width_out, bypass):
+    height_ratio = int(photo.shape[0] / height_out)
+    width_ratio = int(photo.shape[1] / width_out)
+    small_photo = np.zeros((height_out, width_out), 'int')
     return small_photo

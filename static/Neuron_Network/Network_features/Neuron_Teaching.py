@@ -16,3 +16,10 @@ def teach():
     training_list = file.readlines()
     file.close()
     del file, neurons
+    for one_photo in training_list:
+        full_list = one_photo.split(',')
+        true_input = (numpy.asfarray(full_list[1:]) / 255.0 * 0.99) + 0.01
+        true_output = numpy.zeros(out_weights) + 0.01
+        true_output[int(full_list[0])] = 0.99
+        for angle in range(10, -20, -5):
+            true_input = true_input.reshape(size, size)

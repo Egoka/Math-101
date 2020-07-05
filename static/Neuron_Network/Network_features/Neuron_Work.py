@@ -2,6 +2,12 @@ import numpy
 import scipy.special
 
 
+def calculation():
+    training_list = numpy.load('static/Neuron_Network/Numpy_array/List_Symbol.npy')
+    input_weights = numpy.load('Weight_Table_INPUT.npy')
+    output_weights = numpy.load('Weight_Table_OUTPUT.npy')
+
+
 def operation(input_weights, output_weights, true_input):
     true_input_t = numpy.array(true_input, ndmin=2).T  # Транспонированная картнка
     in_matrix = numpy.dot(input_weights, true_input_t)  # Входной сигнал * веса

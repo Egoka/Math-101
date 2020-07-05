@@ -23,6 +23,13 @@ def translate_arr():
     del i, j, column, row, limit
     io.imsave('static/Neuron_Network/img/paint.png', photo)
 
+
+################################################################
+def fragmentation():
+    image = io.imread('static/Neuron_Network/img/paint.png')
+    return one_number
+
+
 ################################################################
 def compression(photo, height_out, width_out, bypass):
     height_ratio = int(photo.shape[0] / height_out)

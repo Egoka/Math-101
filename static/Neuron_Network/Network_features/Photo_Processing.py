@@ -28,8 +28,14 @@ def translate_arr():
 def fragmentation():
     image = io.imread('static/Neuron_Network/img/paint.png')
     size = 28
+    image = shear(image)
     one_number, row = np.zeros((1, size**2), 'int'), 0
     np.save('app/static/Neuron_Network/Numpy_array/List_Symbol.npy', one_number)
+
+
+################################################################
+def shear(image):
+    return image
 
 
 ################################################################

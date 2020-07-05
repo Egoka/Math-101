@@ -39,6 +39,11 @@ def customization(input_weights, output_weights, true_input, true_output, speed_
     out_matrix = numpy.dot(output_weights, in_finale)  # Выходной сигнал * веса
     out_finale = activation_function(out_matrix)  # Выходной результат функции выходных сигналов
     del in_matrix, out_matrix
+    error = true_output_t - out_finale  # Ошибка выходных данных
+    hidden_error = numpy.dot(output_weights.T, error)
+    ###########################################################
+    input_weights += speed_learn * numpy.dot((hidden_error * in_finale * (1 - in_finale)), numpy.transpose(true_input_t))
+    output_weights += speed_learn * numpy.dot((error * out_finale * (1 - out_finale)), numpy.transpose(in_finale))
     return input_weights, output_weights
 
 

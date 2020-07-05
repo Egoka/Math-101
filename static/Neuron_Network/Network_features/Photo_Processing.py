@@ -9,7 +9,8 @@ def translate_arr():
     photo = photo.astype('uint8')
     if photo.shape[0] > 1000 and photo.shape[1] > 1000:
         photo = compression(photo, int(photo.shape[0] / 2), int(photo.shape[1] / 2), False)
-
+    photo = 255 - photo
+    photo += 255 - np.amax(photo)
 
 ################################################################
 def compression(photo, height_out, width_out, bypass):

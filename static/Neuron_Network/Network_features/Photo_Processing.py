@@ -11,6 +11,17 @@ def translate_arr():
         photo = compression(photo, int(photo.shape[0] / 2), int(photo.shape[1] / 2), False)
     photo = 255 - photo
     photo += 255 - np.amax(photo)
+    limit = int(np.bincount(photo[int(photo.shape[0] / 2), :]).argmax() * 1.25)  # +25%
+    i, j = 0, 0
+    for row in photo:
+        for column in row:
+            if limit >= column:
+                photo[i, j] = 0
+            j += 1
+        j = 0
+        i += 1
+    del i, j, column, row, limit
+    io.imsave('static/Neuron_Network/img/paint.png', photo)
 
 ################################################################
 def compression(photo, height_out, width_out, bypass):

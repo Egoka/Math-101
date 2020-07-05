@@ -35,6 +35,15 @@ def fragmentation():
 
 ################################################################
 def shear(image):
+    row = 0
+    while image.shape[0] != row:
+        if np.sum(image[row, :]) >= 500:
+            row += 1
+        elif row > 100:
+            image = image[:row, :]
+        else:
+            image, row = image[row:, :], 0
+            image = np.delete(image, row, axis=0)
     return image
 
 

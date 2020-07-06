@@ -30,6 +30,17 @@ def fragmentation():
     size = 28
     image = shear(image)
     one_number, row = np.zeros((1, size**2), 'int'), 0
+    while image.shape[1] != row:
+        if np.sum(image[:, row]) >= 300:
+            row += 1
+        elif row > 15:
+            symbol = image[:, :row]
+            #########################################
+            image, row = image[:, row:], 0
+        else:
+            image, row = image[:, row:], 0
+            image = np.delete(image, row, axis=1)
+    one_number = np.delete(one_number, 0, axis=0)
     np.save('app/static/Neuron_Network/Numpy_array/List_Symbol.npy', one_number)
 
 

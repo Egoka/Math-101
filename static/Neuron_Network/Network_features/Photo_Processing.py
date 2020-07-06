@@ -87,6 +87,12 @@ def shear_small(image):
 
 ################################################################
 def add_edge(image):
+    if image.shape[0] > image.shape[1]:
+        factor = math.ceil(image.shape[0] / 28)
+    else:
+        factor = math.ceil(image.shape[1] / 28)
+    factor = math.ceil(factor * 1.35)
+    size = 28 * factor
     return image_and_edge
 
 

@@ -93,6 +93,15 @@ def add_edge(image):
         factor = math.ceil(image.shape[1] / 28)
     factor = math.ceil(factor * 1.35)
     size = 28 * factor
+    if image.shape[0] > image.shape[1]:
+        additive_up = int(size / 2) - int(image.shape[0] / 2)
+        additive_left = int(size / 2) - int(image.shape[1] / 2)
+    else:
+        additive_left = int(size / 2) - int(image.shape[1] / 2)
+        additive_up = int(size / 2) - int(image.shape[0] / 2)
+    image_and_edge = np.zeros((size, size), 'int')
+    image_and_edge[additive_up:image.shape[0] + additive_up, additive_left:image.shape[1] + additive_left] = image
+    image_and_edge = image_and_edge.astype('uint8')
     return image_and_edge
 
 

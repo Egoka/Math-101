@@ -37,6 +37,7 @@ def fragmentation():
             symbol = image[:, :row]
             symbol = shear_small(symbol)
             symbol = add_edge(symbol)
+            symbol = compression(symbol, size, size, True)
             #########################################
             image, row = image[:, row:], 0
         else:

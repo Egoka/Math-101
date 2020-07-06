@@ -35,6 +35,7 @@ def fragmentation():
             row += 1
         elif row > 15:
             symbol = image[:, :row]
+            symbol = shear_small(symbol)
             #########################################
             image, row = image[:, row:], 0
         else:
@@ -55,6 +56,31 @@ def shear(image):
         else:
             image, row = image[row:, :], 0
             image = np.delete(image, row, axis=0)
+    return image
+
+
+################################################################
+def shear_small(image):
+    row, high, depth, symbol = 0, 0, 0, False
+    while image.shape[0] != row:
+        if np.sum(image[row, :]) > 500:
+            row += 1
+            depth += 1
+        elif depth > 0:
+            if depth > 10:
+                depth, high = 0, row
+                symbol = True ^ symbol
+            else:
+                image, depth = np.delete(image, list(range(high, row)), axis=0), 0
+                row -= high
+        else:
+            if not symbol:
+                image = np.delete(image, row, axis=0)
+            else:
+                row += 1
+                if image.shape[0] == row:
+                    image = np.delete(image, list(range(high, row)), axis=0)
+                    row = high
     return image
 
 

@@ -38,6 +38,8 @@ def fragmentation():
             symbol = shear_small(symbol)
             symbol = add_edge(symbol)
             symbol = compression(symbol, size, size, True)
+            symbol = symbol.reshape(1, size**2)
+            one_number = np.append(one_number, symbol, axis=0)
             #########################################
             image, row = image[:, row:], 0
         else:

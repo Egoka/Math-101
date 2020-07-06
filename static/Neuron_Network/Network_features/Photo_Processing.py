@@ -36,6 +36,7 @@ def fragmentation():
         elif row > 15:
             symbol = image[:, :row]
             symbol = shear_small(symbol)
+            symbol = add_edge(symbol)
             #########################################
             image, row = image[:, row:], 0
         else:
@@ -82,6 +83,11 @@ def shear_small(image):
                     image = np.delete(image, list(range(high, row)), axis=0)
                     row = high
     return image
+
+
+################################################################
+def add_edge(image):
+    return image_and_edge
 
 
 ################################################################

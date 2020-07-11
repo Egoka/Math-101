@@ -12,3 +12,7 @@ def teach():
     input_weights = (numpy.random.rand(neurons, in_weights) - 0.5)
     output_weights = (numpy.random.rand(out_weights, neurons) - 0.5)
     ###########################################################
+    file = open('static/Neuron_Network/Mnist_Tables/mnist_train.csv', 'r')
+    training_list = file.readlines()
+    file.close()
+    del file, neurons

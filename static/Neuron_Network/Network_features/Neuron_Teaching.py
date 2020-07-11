@@ -28,6 +28,11 @@ def teach():
             input_nam = turn(true_input, angle)
             input_nam = input_nam.reshape(in_weights)
             input_weights, output_weights = customization(input_weights, output_weights, input_nam, true_output, learn)
+    ###########################################################
+    del training_list, one_photo, full_list, true_input, input_nam, true_output, learn
+    ###########################################################
+    numpy.save('static/Neuron_Network/Numpy_array/Weight_Table_INPUT.npy', input_weights)
+    numpy.save('static/Neuron_Network/Numpy_array/Weight_Table_OUTPUT.npy', output_weights)
 
 
 ###########################################################

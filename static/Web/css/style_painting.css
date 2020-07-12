@@ -34,6 +34,22 @@
     height: 40%;
     margin: 5px;
 }
+.features_canvas{
+    width: 80%;
+    height: 500px;
+    margin: 5px;
+    background: #26282b;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: .5s linear;
+}
+.features_canvas:hover{
+    background: #90b8f8;
+    box-shadow: 0 0 25px 10px rgb(95, 133, 219),
+    0 0 25px rgba(255,255,255,0.5),
+    inset 0 0 4px rgba(255,255,255,0.1),
+    0 0 8px rgba(0,0,0,0.15);
+}
 .features_tool{
     width: 60px;
     height: 60px;

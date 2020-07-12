@@ -71,3 +71,17 @@ h1,h2,h3,h4,h5,h6{margin: 0;}
 .btn:focus {
     outline: none;
 }
+/**/
+/**/
+/*MEDIA INQUIRIES*/
+@media (max-width: 1000px){
+    .intro_title{
+        font-size: 55px;
+    }
+    .intro_text{
+        font-size: 17px;
+    }
+    .features_item{
+        margin: 10px;
+    }
+}

@@ -27,3 +27,13 @@
     inset 0 0 4px rgba(255,255,255,0.1),
     0 0 8px rgba(0,0,0,0.15);
 }
+/*ICO*/
+.features_icon{
+    max-height: 100px;
+    margin: 20px;
+    user-select: none;
+    transition: transform .4s linear;
+}
+.features_icon:hover{
+    transform: scale(1.2);
+}

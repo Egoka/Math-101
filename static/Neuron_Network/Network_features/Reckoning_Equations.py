@@ -52,4 +52,43 @@ def count():
         else:
             size += 1
     del size
+    if type(list_element[0]) == str:
+        list_element.pop(0)
+    address, addition_address, multiplication_address, division_address = 0, 0, 0, 0
+    multiplication_kay, division_kay = True, True
+    while len(list_element) != 1:
+        if multiplication_kay:
+            try:
+                multiplication_address = list_element.index('×')
+            except ValueError:
+                multiplication_address = 999
+                multiplication_kay = False
+        if division_kay:
+            try:
+                division_address = list_element.index('÷')
+            except ValueError:
+                division_address = 999
+                division_kay = False
+        if not division_kay and not multiplication_kay:
+            try:
+                address = list_element.index('+')
+                list_element[address - 1] = list_element[address - 1] + list_element[address + 1]
+                list_element.pop(address)
+                list_element.pop(address)
+                continue
+            except ValueError:
+                pass
+        if multiplication_address > division_address:
+            address = division_address
+            list_element[address - 1] = round(list_element[address - 1] / list_element[address + 1], 2)
+        else:
+            address = multiplication_address
+            list_element[address - 1] = round(list_element[address - 1] * list_element[address + 1], 2)
+        list_element.pop(address)
+        list_element.pop(address)
+    del address, addition_address, multiplication_address, division_address, multiplication_kay, division_kay
+    list_example.append('=')
+    list_example.append(format(list_element[0]))
+    list_example = list(map(str, list_example))
+    example = ''.join(list_example)
     return example

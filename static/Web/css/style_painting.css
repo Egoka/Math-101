@@ -11,3 +11,10 @@
 .intro_painting{
     padding-top: 10px;
 }
+.intro_title_painting{
+    color: #3282b8;
+    transition: .4s linear;
+}
+.intro_title_painting:hover{
+    color: #7ccbff;
+}

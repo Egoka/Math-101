@@ -1,0 +1,118 @@
+body, html{
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{margin: 0;}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+#my-page{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+}
+/*INTRO*/
+.intro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content:center;
+    padding-top: 100px;
+}
+.intro_title{
+    width: auto;
+    font-family: 'Istok Web', sans-serif;
+    font-size:65px;
+    text-align: center;
+    user-select: none;
+}
+.intro_text{
+    width: 100%;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 20px;
+    user-select: none;
+}
+/*FEATURES*/
+.features{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.features_item{
+    margin: 50px;
+    max-width: 300px;
+    padding: 10px 55px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+}
+/*BUTTON*/
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    padding: 12px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    font-family: 'Ralewey', sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    user-select: none;
+}
+.btn,
+.btn:active,
+.btn:focus {
+    outline: none;
+}
+/**/
+/**/
+/*MEDIA INQUIRIES*/
+@media (max-width: 1000px){
+    .intro_title{
+        font-size: 55px;
+    }
+    .intro_text{
+        font-size: 17px;
+    }
+    .features_item{
+        margin: 10px;
+    }
+}
+@media (max-width: 700px){
+    .intro{
+        padding-top: 50px;/* Отступ сверху */
+    }
+    .intro_title{
+        font-size: 50px;
+    }
+    .intro_text{
+        font-size: 12px;
+    }
+    .features{
+        margin: 0;
+    }
+}
+@media (max-width: 450px){
+    .intro{
+        padding-top: 30px;
+    }
+    .intro_title{
+        font-size: 45px;
+    }
+    .features_item{
+        max-width: 250px;
+        padding: 10px 20px;
+    }
+}
+@media (max-width: 330px) {
+    .intro_title{
+        font-size: 35px;
+    }
+}

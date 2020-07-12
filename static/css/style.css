@@ -44,3 +44,11 @@ h1,h2,h3,h4,h5,h6{margin: 0;}
     align-items: center;
     flex-wrap: wrap;
 }
+.features_item{
+    margin: 50px;
+    max-width: 300px;
+    padding: 10px 55px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+}

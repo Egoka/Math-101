@@ -7,3 +7,11 @@
     height: 100%;
     background: #222831;
 }
+/*INTRO*/
+.intro_title_start{
+    color: #ec625f;/* Цвет */
+    transition: .4s linear;
+}
+.intro_title_start:hover{
+    color: #db3056;/* Цвет */
+}

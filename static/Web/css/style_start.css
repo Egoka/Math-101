@@ -15,3 +15,15 @@
 .intro_title_start:hover{
     color: #db3056;/* Цвет */
 }
+/*FEATURES*/
+.features_item_start{
+    background: #313131;
+    transition: .4s linear;
+}
+.features_item_start:hover{
+    background: #fdc8c7;
+    box-shadow: 0 0 25px rgb(236, 98, 95),
+    0 0 25px rgba(255,255,255,0.5),
+    inset 0 0 4px rgba(255,255,255,0.1),
+    0 0 8px rgba(0,0,0,0.15);
+}

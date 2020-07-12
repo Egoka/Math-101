@@ -8,3 +8,9 @@ h1,h2,h3,h4,h5,h6{margin: 0;}
 *:after {
     box-sizing: border-box;
 }
+#my-page{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,80 @@
+/*BACKGROUND*/
+#particles_start{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222831;
+}
+/*INTRO*/
+.intro_title_start{
+    color: #ec625f;/* Цвет */
+    transition: .4s linear;
+}
+.intro_title_start:hover{
+    color: #db3056;/* Цвет */
+}
+/*FEATURES*/
+.features_item_start{
+    background: #313131;
+    transition: .4s linear;
+}
+.features_item_start:hover{
+    background: #fdc8c7;
+    box-shadow: 0 0 25px rgb(236, 98, 95),
+    0 0 25px rgba(255,255,255,0.5),
+    inset 0 0 4px rgba(255,255,255,0.1),
+    0 0 8px rgba(0,0,0,0.15);
+}
+/*ICO*/
+.features_icon{
+    max-height: 100px;
+    margin: 20px;
+    user-select: none;
+    transition: transform .4s linear;
+}
+.features_icon:hover{
+    transform: scale(1.2);
+}
+/*TITLE*/
+.features_title{
+    font-family: 'Istok Web', sans-serif;
+    margin-bottom: 15px;/* отступы снизу */
+    font-size: 18px;/* Размер шрифта */
+    color: #ec625f;/* Цвет шрифта */
+    text-transform: uppercase;/* сделать все буквы большими */
+    user-select: none;/*запрет выделения текста*/
+    transition: color .2s linear;/* Плавность перехода:*/
+}
+.features_item:hover .features_title {
+    color: #db3056;
+}
+/*TEXT*/
+.features_text{
+    font-family: 'Istok Web', sans-serif;
+    margin-bottom: 15px;/* отступы снизу */
+    font-size:16px;/* Размер шрифта */
+    line-height: 1.2;/* межстрочный интервал в коэффициенте высоты строки */
+    color: #ec625f;
+    user-select: none;/*запрет выделения текста*/
+    transition: color .2s linear;/* Плавность перехода:*/
+}
+.features_item:hover .features_text {
+    color: #db3056;
+}
+/**/
+/**/
+/*MEDIA INQUIRIES*/
+@media (max-width: 450px) {
+    .features_icon {
+        max-height: 75px; /* максимальная ширина */
+        margin: 10px; /* отступы */
+    }
+    .features_title {
+        margin-bottom: 0; /* отступы снизу */
+    }
+    .features_text {
+        margin-bottom: 0; /* отступы снизу */
+    }
+}

@@ -12,4 +12,16 @@ def count():
     except IndexError:
         example = "Примера нет."
         return example
+    list_element, math_sig, number = [], ['+', '-', '×', '÷', '='], 0
+    for i in range(0, len(training_list)):
+        element = training_list[i]
+        if element < 10:
+            number = int((number + 0.1 * element) * 10)
+            if training_list[i + 1] > 9:
+                list_element.append(number)
+                number = 0
+        else:
+            list_element.append(math_sig[element - 10])
+    del number, element, training_list, i, math_sig
+    list_element.pop(-1)
     return example

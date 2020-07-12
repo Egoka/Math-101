@@ -63,3 +63,18 @@
 .features_item:hover .features_text {
     color: #db3056;
 }
+/**/
+/**/
+/*MEDIA INQUIRIES*/
+@media (max-width: 450px) {
+    .features_icon {
+        max-height: 75px; /* максимальная ширина */
+        margin: 10px; /* отступы */
+    }
+    .features_title {
+        margin-bottom: 0; /* отступы снизу */
+    }
+    .features_text {
+        margin-bottom: 0; /* отступы снизу */
+    }
+}

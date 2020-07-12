@@ -37,3 +37,16 @@
 .features_icon:hover{
     transform: scale(1.2);
 }
+/*TITLE*/
+.features_title{
+    font-family: 'Istok Web', sans-serif;
+    margin-bottom: 15px;/* отступы снизу */
+    font-size: 18px;/* Размер шрифта */
+    color: #ec625f;/* Цвет шрифта */
+    text-transform: uppercase;/* сделать все буквы большими */
+    user-select: none;/*запрет выделения текста*/
+    transition: color .2s linear;/* Плавность перехода:*/
+}
+.features_item:hover .features_title {
+    color: #db3056;
+}

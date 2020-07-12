@@ -50,3 +50,16 @@
 .features_item:hover .features_title {
     color: #db3056;
 }
+/*TEXT*/
+.features_text{
+    font-family: 'Istok Web', sans-serif;
+    margin-bottom: 15px;/* отступы снизу */
+    font-size:16px;/* Размер шрифта */
+    line-height: 1.2;/* межстрочный интервал в коэффициенте высоты строки */
+    color: #ec625f;
+    user-select: none;/*запрет выделения текста*/
+    transition: color .2s linear;/* Плавность перехода:*/
+}
+.features_item:hover .features_text {
+    color: #db3056;
+}

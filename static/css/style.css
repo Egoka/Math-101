@@ -14,3 +14,12 @@ h1,h2,h3,h4,h5,h6{margin: 0;}
     position: absolute;
     flex-wrap: wrap;
 }
+/*INTRO*/
+.intro{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content:center;
+    padding-top: 100px;
+}

@@ -132,3 +132,12 @@
         margin-top: 5px;
     }
 }
+@media (max-width: 330px) {
+
+    #tool_2{
+        padding-left: 160px;
+    }
+    .btn--paint{
+         margin: 5px 0;
+    }
+}

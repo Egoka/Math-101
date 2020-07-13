@@ -25,3 +25,43 @@
 .features_back{
     margin-top: 150px;
 }
+.boot_area{
+	width: 600px;
+	height: 350px;
+	margin: 5px;
+	text-align: center;
+	border-radius: 25px;
+	overflow: hidden;
+	z-index: 10;
+	box-shadow: 0 0 25px #383a56,
+    0 0 25px rgba(73, 90, 99, 0.6),
+    inset 0 0 4px rgba(255,255,255,0.1),
+    0 0 8px rgba(0,0,0,0.15);
+	background: rgb(56,58,86);
+	background: radial-gradient(circle, rgba(56,58,86,1) 0%, rgba(47,48,50,0.9) 100%);
+	transition:  .5s linear;
+}
+.boot_area:hover{
+	background: rgb(241,227,203);
+	background: radial-gradient(circle, rgba(241,227,203,1) 0%, rgba(249,179,132,1) 100%);
+    box-shadow: 0 0 25px 10px rgb(249,179,132),
+    0 0 25px rgba(255,255,255,0.5),
+    inset 0 0 4px rgba(255,255,255,0.1),
+    0 0 8px rgba(0,0,0,0.15);
+}
+.boot_area input[type=file] {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	position: absolute;
+}
+img{
+	max-width: 600px;
+	max-height: 280px;
+	position: absolute;
+	left:0;
+	right: 0;
+	margin: 0 auto;
+	border-radius: 25px;
+	z-index: 15;
+}

@@ -18,6 +18,7 @@ window.onload = function() {
     context.lineWidth = 15;
     startup()
     //////////////////////
+    document.getElementById("line").innerHTML = context.lineWidth;
 }
 //////////////////////////////////////////////////////////
 function startup(){

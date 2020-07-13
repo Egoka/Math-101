@@ -252,3 +252,8 @@ img{
 				rotate( 60deg);
 	}
 }
+@media (max-width: 350px) {
+	.boot_area:hover .text {
+		top: 43%;
+	}
+}

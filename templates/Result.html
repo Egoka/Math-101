@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/Web/css/style.css">
+    <link rel="stylesheet" href="../static/Web/css/style_result.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+{% if start == True %}
+    <meta http-equiv="Refresh" content="0; URL=Result.html">
+{% endif %}
+<div id="particles_result"></div>
+<div id="my-page">
+    <div class="intro intro_result">
+        <h1 class="intro_title intro_title_result">Результат</h1>
+    </div>
+    <div class="features_result">
+        <h1 class="result">{{ result_count }}</h1>
+    </div>
+    <div class="features features_back">
+        <a href="Start.html" class="btn btn--result">Вернуться</a>
+    </div>
+    <div class="end_text" id="id">
+        neuron network from
+        <a href="https://github.com/Egorkassss" class="end_text">bondarenko egor</a>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
+<script src="../static/Web/Particles/JS/my_particles_result.js" defer></script>
+</body>
+</html>

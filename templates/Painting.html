@@ -19,16 +19,16 @@
     </div>
     <div class="features features_painting">
         <div class="features_configuration" id="tool_1">
-            <img class="features_tool" src="../static/Web/ico/pencil.png"  alt="">
-            <img class="features_tool" src="../static/Web/ico/eraser.png"  alt="">
+            <img class="features_tool" src="../static/Web/ico/pencil.png"  alt="" onclick="changeColor(false)">
+            <img class="features_tool" src="../static/Web/ico/eraser.png"  alt="" onclick="changeColor(true)">
         </div>
         <div class="features_canvas">
             <canvas id="canvas"></canvas>
             <script src="../static/Web/js/canvas.js"></script>
         </div>
         <div class="features_configuration" id="tool_2">
-            <div  class="features_tool size_text"><div id="line"></div></div>
-            <img class="features_tool" src="../static/Web/ico/basket.png"  alt="">
+            <div  class="features_tool size_text" onclick="changeThickness(5)"><div id="line"></div></div>
+            <img class="features_tool" src="../static/Web/ico/basket.png"  alt="" onclick="clearCanvas()">
         </div>
     </div>
 </div>

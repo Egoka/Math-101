@@ -35,6 +35,12 @@ function startup(){
 	context.lineCap =['round'];
 	context.lineJoin = ['bevel'];
 }
+//////////////////////////////////////////////////////////////////////////
+function changeColor(pan_eraser){
+	if (pan_eraser === true){context.globalCompositeOperation = 'destination-out';}
+	else                    {context.globalCompositeOperation = 'source-over';}
+}
+//////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 function startDrawing(e) {
 	isDrawing = true;// Начинаем рисовать

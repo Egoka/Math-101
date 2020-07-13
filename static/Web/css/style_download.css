@@ -11,3 +11,10 @@
 .intro_download{
     padding-top: 10px;
 }
+.intro_title_download{
+    color: #71718e;
+    transition: .4s linear;
+}
+.intro_title_download:hover{
+    color: #f9b384;
+}

@@ -206,3 +206,49 @@ img{
 				rotate( 60deg);
 	}
 }
+@media (max-width: 450px){
+	.features_back{
+		margin-top: 50px;
+	}
+	.boot_area{
+		width: 250px;
+	}
+	img{
+		max-width: 250px;
+		max-height: 270px;
+		padding-top: 0;
+	}
+	.boot_area:hover .text{
+		top: 38%;
+	}
+	#line_1 {
+		transform:
+				translate(25px,  -120px)
+				rotate(90deg);
+	}
+	#line_2 {
+		transform:
+				translate(106px, -199px)
+				rotate(45deg);
+	}
+	#line_3 {
+		transform:
+				translate(45px,  -215px)
+				rotate(-45deg);
+	}
+	.boot_area:hover #line_1 {
+		transform:
+				translate(25px, -200px)
+				rotate(  0deg);
+	}
+	.boot_area:hover #line_2 {
+		transform:
+				translate(76px,-137px)
+				rotate(-60deg);
+	}
+	.boot_area:hover #line_3 {
+		transform:
+				translate(-20px, -154px)
+				rotate( 60deg);
+	}
+}

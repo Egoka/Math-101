@@ -147,3 +147,14 @@ img{
 	background: rgb(249,179,132);
     color: #ca5116;
 }
+/**/
+/**/
+/*MEDIA INQUIRIES*/
+@media (max-width: 1000px){
+	.features_back{
+    	margin-top: 130px;
+	}
+	.boot_area:hover .text{
+		top: 51%;
+	}
+}

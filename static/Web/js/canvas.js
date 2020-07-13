@@ -49,6 +49,11 @@ function changeThickness (thickness)
 	if (context.lineWidth >= 31){context.lineWidth = 5}
 	document.getElementById("line").innerHTML = context.lineWidth;
 }
+//////////////////////
+function clearCanvas() {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+	context.globalCompositeOperation = 'source-over';
+}
 //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 function startDrawing(e) {

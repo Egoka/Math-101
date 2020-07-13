@@ -54,6 +54,12 @@ function clearCanvas() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
 	context.globalCompositeOperation = 'source-over';
 }
+//////////////////////
+function saveCanvas() {
+	var imageData = canvas.toDataURL("image/png").replace('data:image/png;base64,','');
+	document.getElementsByName("PHOTO")[0].setAttribute("value", imageData);
+	console.log(document.getElementsByName("PHOTO")[0]);
+}
 //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 function startDrawing(e) {

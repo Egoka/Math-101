@@ -82,3 +82,18 @@
 .size_text:hover{
     color: #fff;
 }
+/*BUTTON*/
+.btn--paint{
+    color: #000;
+    margin: 40px 0;
+    background-color: #5f85db;
+    transition: .2s linear;
+}
+.btn--paint:hover{
+    color: #fff;
+    border-radius: 21px;
+    box-shadow: 0 0 25px 10px rgb(95, 133, 219),
+    0 0 25px rgba(255,255,255,0.5),
+    inset 0 0 4px rgba(255,255,255,0.1),
+    0 0 8px rgba(0,0,0,0.15);
+}

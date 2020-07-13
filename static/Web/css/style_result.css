@@ -52,3 +52,19 @@
 .features_result:hover .result{
     color: #4a7452;
 }
+/*BUTTON*/
+.btn--result{
+    color: #a3f7bf;
+    margin: 40px 0;
+    background-color: #435055;/* фон кнопки */
+    transition: .2s linear;
+}
+.btn--result:hover{
+    color: #4a7452;
+    border-radius: 21px;
+    background: #a3f7bf;
+    box-shadow: 0 0 25px 10px #a3f7bf,
+    0 0 25px rgba(255,255,255,0.5),
+    inset 0 0 4px rgba(255,255,255,0.1),
+    0 0 8px rgba(0,0,0,0.15);
+}

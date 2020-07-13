@@ -158,3 +158,51 @@ img{
 		top: 51%;
 	}
 }
+@media (max-width: 700px){
+    .intro_title_download{
+		font-size: 30px;
+    }
+	.features_back{
+		margin-top: 100px;
+	}
+	.boot_area{
+		width: 350px;
+	}
+	img{
+		max-width: 350px;
+		max-height: 270px;
+		padding-top: 0;
+	}
+	.boot_area:hover .text{
+		top: 44%;
+	}
+	#line_1 {
+		transform:
+				translate(75px,  -120px)
+				rotate(90deg);
+	}
+	#line_2 {
+		transform:
+				translate(156px, -199px)
+				rotate(45deg);
+	}
+	#line_3 {
+		transform:
+				translate(95px,  -215px)
+				rotate(-45deg);
+	}
+	.boot_area:hover #line_1 {
+		transform:
+				translate(75px, -200px)
+				rotate(  0deg);
+	}
+	.boot_area:hover #line_2 {
+		transform: translate(126px,-137px)
+		rotate(-60deg);
+	}
+	.boot_area:hover #line_3 {
+		transform:
+				translate(30px, -154px)
+				rotate( 60deg);
+	}
+}

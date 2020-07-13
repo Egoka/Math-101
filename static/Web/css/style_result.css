@@ -84,3 +84,9 @@
     color: #a3f7bf;
     user-select: none;/*запрет выделения текста*/
 }
+@media (max-width: 700px) {
+    .features_result{
+        width: 100%;
+        margin: 60px 0;
+    }
+}

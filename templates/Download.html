@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../static/Web/css/style_download.css">
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script type="text/javascript" src="../static/Web/js/img.js"></script>
 </head>
 <body>
 <div id="particles_download"></div>
@@ -28,6 +29,7 @@
                 </div>
             </label>
             <form action="Download.html" enctype="multipart/form-data" method="POST">
+                <input id="file-input" type="file" onchange="previewFile()" name="photo" multiple accept="image/*">
                 <button type="submit" value="" class="btn btn--download" >Обработать</button>
             </form>
         </div>

@@ -21,10 +21,12 @@ window.onload = function() {
     canvas.onmousedown = startDrawing;
     canvas.onmouseup = stopDrawing;
     canvas.onmouseout = stopDrawing;
+    canvas.onmousemove = draw;
     //////////////////////
     canvas.ontouchstart = handleStart;
     canvas.ontouchend = handleEnd;
     canvas.ontouchcancel = handleCancel;
+    canvas.ontouchmove = handleMove;
     //////////////////////
     document.getElementById("line").innerHTML = context.lineWidth;
 }
@@ -43,6 +45,18 @@ function startDrawing(e) {
 ///////////////////////////////////////////////////////////////////////////
 function stopDrawing() {isDrawing = false;}
 ///////////////////////////////////////////////////////////////////////////
+function draw(e) {
+	if (isDrawing === true)
+	{
+	  	// Определяем текущие координаты указателя мыши
+		const x = e.pageX - canvas.offsetLeft;
+		const y = e.pageY - canvas.offsetTop;
+		// Рисуем линию до новой координаты
+		context.lineTo(x, y);
+		context.stroke();
+	}
+}
+///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 function handleStart(e) {
      for (var i = 0; i < e.changedTouches.length; i++) {
@@ -60,4 +74,12 @@ function handleEnd(e) {
 function handleCancel(e) {
   e.preventDefault();
   for (var i = 0; i < e.changedTouches.length; i++) {ongoingTouches.splice(i, 1);  }
+}
+///////////////////////////////////////////////////////////////////////////
+function handleMove(e) {
+  e.preventDefault();
+  for (var i = 0; i < e.changedTouches.length; i++) {
+      context.lineTo(e.changedTouches[i].pageX - canvas.offsetLeft, e.changedTouches[i].pageY - canvas.offsetTop);
+      context.stroke();
+  }
 }

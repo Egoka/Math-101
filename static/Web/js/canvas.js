@@ -40,6 +40,15 @@ function changeColor(pan_eraser){
 	if (pan_eraser === true){context.globalCompositeOperation = 'destination-out';}
 	else                    {context.globalCompositeOperation = 'source-over';}
 }
+//////////////////////
+let  isDrawing;
+function changeThickness (thickness)
+{
+    // Изменяем текущую толщину линии
+	context.lineWidth = context.lineWidth + thickness;
+	if (context.lineWidth >= 31){context.lineWidth = 5}
+	document.getElementById("line").innerHTML = context.lineWidth;
+}
 //////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 function startDrawing(e) {

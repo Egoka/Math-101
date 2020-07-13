@@ -18,10 +18,28 @@ window.onload = function() {
     context.lineWidth = 15;
     startup()
     //////////////////////
+    canvas.onmousedown = startDrawing;
+    //////////////////////
+    canvas.ontouchstart = handleStart;
+    //////////////////////
     document.getElementById("line").innerHTML = context.lineWidth;
 }
 //////////////////////////////////////////////////////////
 function startup(){
 	context.lineCap =['round'];
 	context.lineJoin = ['bevel'];
+}
+///////////////////////////////////////////////////////////////////////////
+function startDrawing(e) {
+	isDrawing = true;// Начинаем рисовать
+	context.beginPath();// Создаем новый путь (с текущим цветом и толщиной линии)
+	// Нажатием левой кнопки мыши помещаем "кисть" на холст
+	context.moveTo(e.pageX - canvas.offsetLeft, e.pageY - canvas.offsetTop);
+}
+///////////////////////////////////////////////////////////////////////////
+function handleStart(e) {
+     for (var i = 0; i < e.changedTouches.length; i++) {
+         context.beginPath();
+         context.fill();
+     }
 }

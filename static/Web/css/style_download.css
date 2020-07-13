@@ -65,3 +65,36 @@ img{
 	border-radius: 25px;
 	z-index: 15;
 }
+/*File-input*/
+.boot{
+	justify-content:center;
+	padding-top: 240px;
+	text-align: center;
+	z-index: 10;
+}
+.text{
+	color: #ca5116;
+	display: flex;
+	position: absolute;
+	top: 54%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	padding-top: 25px;
+	font-size: 22px;
+	opacity: 0;
+	z-index: 11;
+    user-select: none;
+	transition: opacity, top .6s linear;
+}
+.boot_area:hover .text{
+	opacity: 1;
+}
+.arrow{
+	display: block;
+	height: 17px;
+	border-radius: 25px;
+	position: relative;
+	z-index: 10;
+	transition: .6s cubic-bezier(0.68, 0.29, 0.4, 0.86);
+}

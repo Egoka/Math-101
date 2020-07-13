@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/Web/css/style.css">
+    <link rel="stylesheet" href="../static/Web/css/style_download.css">
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script type="text/javascript" src="../static/Web/js/img.js"></script>
+</head>
+<body>
+<div id="particles_download"></div>
+<div id="my-page">
+    <div class="intro intro_download">
+        <h1 class="intro_title intro_title_download">Загружайте изображение</h1>
+        <h4 class="intro_text intro_text_download">Загрузите ваш файл.</h4>
+    </div>
+    <div class="features features_back">
+        <div class="boot_area">
+            <img src="" alt="">
+            <label for="file-input">
+                <h4 class="text">Загрузить</h4>
+                <div class="boot">
+                    <span class="arrow" id="line_1"></span>
+                    <span class="arrow" id="line_2"></span>
+                    <span class="arrow" id="line_3"></span>
+                </div>
+            </label>
+            <form action="Download.html" enctype="multipart/form-data" method="POST">
+                <input id="file-input" type="file" onchange="previewFile()" name="photo" multiple accept="image/*">
+                <button type="submit" value="" class="btn btn--download" >Обработать</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
+<script src="../static/Web/Particles/JS/my_particles_download.js" defer></script>
+</body>
+</html>

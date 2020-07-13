@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Painting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../static/Web/css/style.css">
+    <link rel="stylesheet" href="../static/Web/css/style_painting.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="particles_painting"></div>
+<div id="my-page">
+    <div class="intro intro_painting">
+        <h1 class="intro_title intro_title_painting">Рисуйте руками</h1>
+        <h4 class="intro_text intro_text_painting">Постарайтесь рисовать символы через расстояние.</h4>
+    </div>
+    <div class="features features_painting">
+        <div class="features_configuration" id="tool_1">
+            <img class="features_tool" src="../static/Web/ico/pencil.png"  alt="" onclick="changeColor(false)">
+            <img class="features_tool" src="../static/Web/ico/eraser.png"  alt="" onclick="changeColor(true)">
+        </div>
+        <div class="features_canvas">
+            <canvas id="canvas"></canvas>
+            <script src="../static/Web/js/canvas.js"></script>
+        </div>
+        <div class="features_configuration" id="tool_2">
+            <div  class="features_tool size_text" onclick="changeThickness(5)"><div id="line"></div></div>
+            <img class="features_tool" src="../static/Web/ico/basket.png"  alt="" onclick="clearCanvas()">
+        </div>
+    </div>
+    <div class="features features_painting">
+        <form action="Painting.html" enctype="multipart/form-data"  method="POST" name='{{ form }}' >
+            <button type="submit" value="" name="PHOTO" class="btn btn--paint" onclick="saveCanvas()">Обработать</button>
+        </form>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
+<script src="../static/Web/Particles/JS/my_particles_painting.js" defer></script>
+</body>
+</html>

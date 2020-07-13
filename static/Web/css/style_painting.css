@@ -124,3 +124,11 @@
         margin-right: 30px;
     }
 }
+@media (max-width: 700px) {
+    #tool_1{
+        padding-top: 280px;
+    }
+    .features_painting{
+        margin-top: 5px;
+    }
+}

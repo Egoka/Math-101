@@ -19,8 +19,12 @@ window.onload = function() {
     startup()
     //////////////////////
     canvas.onmousedown = startDrawing;
+    canvas.onmouseup = stopDrawing;
+    canvas.onmouseout = stopDrawing;
     //////////////////////
     canvas.ontouchstart = handleStart;
+    canvas.ontouchend = handleEnd;
+    canvas.ontouchcancel = handleCancel;
     //////////////////////
     document.getElementById("line").innerHTML = context.lineWidth;
 }
@@ -37,9 +41,23 @@ function startDrawing(e) {
 	context.moveTo(e.pageX - canvas.offsetLeft, e.pageY - canvas.offsetTop);
 }
 ///////////////////////////////////////////////////////////////////////////
+function stopDrawing() {isDrawing = false;}
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
 function handleStart(e) {
      for (var i = 0; i < e.changedTouches.length; i++) {
          context.beginPath();
          context.fill();
      }
+}
+///////////////////////////////////////////////////////////////////////////
+function handleEnd(e) {
+  e.preventDefault();
+  for (var i = 0; i < e.changedTouches.length; i++) {
+      context.moveTo(e.changedTouches[i].pageX, e.changedTouches[i].pageY);
+  }
+}
+function handleCancel(e) {
+  e.preventDefault();
+  for (var i = 0; i < e.changedTouches.length; i++) {ongoingTouches.splice(i, 1);  }
 }

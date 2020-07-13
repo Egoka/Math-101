@@ -132,3 +132,18 @@ img{
 	transform: translate(155px, -154px)
 	rotate(60deg);
 }
+/*BUTTON*/
+.btn--download{
+	color: #ede68a;
+    background: rgb(56, 58, 86);
+	background: radial-gradient(circle, rgb(115, 118, 168) 0%, rgba(47,48,50,0) 100%);
+    transition: .2s linear;
+}
+.btn--download:hover{
+	border-radius: 20px;
+	color: orangered;
+}
+.boot_area:hover .btn--download{
+	background: rgb(249,179,132);
+    color: #ca5116;
+}

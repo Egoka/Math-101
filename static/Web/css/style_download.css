@@ -98,3 +98,37 @@ img{
 	z-index: 10;
 	transition: .6s cubic-bezier(0.68, 0.29, 0.4, 0.86);
 }
+/*Span*/
+#line_1{
+	background: linear-gradient(to left,#f9b384, #ca5116 80%);
+	width: 200px;
+	transform: translate(200px, -120px)
+	rotate(90deg);
+}
+#line_2{
+	background: linear-gradient(to left,#f9b384, #ca5116 80%);
+	width: 100px;
+	transform: translate(283px, -197px)
+	rotate(45deg);
+}
+#line_3{
+	background: linear-gradient(to left, #ca5116 20%,#f9b384);
+	width: 100px;
+	transform: translate(218px, -215px)
+	rotate(-45deg);
+}
+.boot_area:hover #line_1{
+	background: linear-gradient(to right,#f9b384, #f9b384);
+	transform: translate(200px, -200px)
+	rotate(0deg);
+}
+.boot_area:hover #line_2{
+	width: 200px;
+	transform: translate(251px, -137px)
+	rotate(-60deg);
+}
+.boot_area:hover #line_3{
+	width: 200px;
+	transform: translate(155px, -154px)
+	rotate(60deg);
+}

@@ -11,3 +11,10 @@
 .intro_result{
     padding-top: 10px;/* Отступ сверху */
 }
+.intro_title_result{
+    color: #29a19c;/* Цвет */
+    transition: .4s linear;
+}
+.intro_title_result:hover{
+    color: #a3f7bf;/* Цвет */
+}

@@ -1,5 +1,5 @@
 ### Flask
-from flask import Flask
+from flask import Flask, render_template
 ### Download photo
 from skimage import io
 ### Painting
@@ -15,7 +15,10 @@ from static.Neuron_Network.Network_features.Reckoning_Equations import count
 app = Flask(__name__)
 
 
-
+@app.route('/')
+@app.route('/Start.html')
+def start():
+    return render_template('Start.html')
 
 
 if __name__ == '__main__':

@@ -21,5 +21,10 @@ def start():
     return render_template('Start.html')
 
 
+@app.route("/Download.html", methods=["POST", "GET"])
+def download():
+    return render_template("Download.html")
+
+
 if __name__ == '__main__':
     app.run(debug=False)

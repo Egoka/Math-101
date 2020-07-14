@@ -1,5 +1,5 @@
 ### Flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 ### Download photo
 from skimage import io
 ### Painting
@@ -23,6 +23,13 @@ def start():
 
 @app.route("/Download.html", methods=["POST", "GET"])
 def download():
+    if request.method == "POST":
+        try:
+            file = request.files["photo"]
+            photo = io.imread(file)
+        except ValueError:
+            return render_template("Download.html")
+        io.imsave('static/Neuron_Network/img/paint.png', photo)
     return render_template("Download.html")
 
 

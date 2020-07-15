@@ -49,6 +49,9 @@ def painting():
 
 @app.route('/Result.html')
 def result():
+    fragmentation()
+    calculation()
+    result_count = count()
     return render_template('Result.html', result_count=result_count, start=False)
 
 

@@ -46,7 +46,7 @@ def fragmentation():
             image, row = image[:, row:], 0
             image = np.delete(image, row, axis=1)
     one_number = np.delete(one_number, 0, axis=0)
-    np.save('app/static/Neuron_Network/Numpy_array/List_Symbol.npy', one_number)
+    np.save('static/Neuron_Network/Numpy_array/List_Symbol.npy', one_number)
 
 
 ################################################################

@@ -47,5 +47,10 @@ def painting():
     return render_template('Painting.html')
 
 
+@app.route('/Result.html')
+def result():
+    return render_template('Result.html', result_count=result_count, start=False)
+
+
 if __name__ == '__main__':
     app.run(debug=False)

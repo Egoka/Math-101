@@ -30,6 +30,8 @@ def download():
         except ValueError:
             return render_template("Download.html")
         io.imsave('static/Neuron_Network/img/paint.png', photo)
+        translate_arr()
+        return render_template("Result.html", start=True)
     return render_template("Download.html")
 
 

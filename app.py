@@ -37,6 +37,13 @@ def download():
 
 @app.route('/Painting.html', methods=["POST", "GET"])
 def painting():
+    if request.method == "POST":
+        photo = request.form['PHOTO']
+        image = Image.open(BytesIO(base64.b64decode(photo)))
+        r, g, b, a = image.split()
+        a.save('static/Neuron_Network/img/paint.png', 'PNG')
+        del r, g, b, a, image, photo
+        return render_template("Result.html", start=True)
     return render_template('Painting.html')
 
 

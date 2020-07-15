@@ -35,5 +35,10 @@ def download():
     return render_template("Download.html")
 
 
+@app.route('/Painting.html', methods=["POST", "GET"])
+def painting():
+    return render_template('Painting.html')
+
+
 if __name__ == '__main__':
     app.run(debug=False)
